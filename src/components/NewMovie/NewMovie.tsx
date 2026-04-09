@@ -41,7 +41,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
     setImgUrl('');
     setImdbUrl('');
     setImdbId('');
-    setCount(c => c + 1);
+    setCount(prevCount => prevCount + 1);
   };
 
   return (
@@ -65,7 +65,6 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
         onChange={value => {
           setDescription(value);
         }}
-        required
       />
 
       <TextField
